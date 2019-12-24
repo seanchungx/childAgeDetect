@@ -15,13 +15,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script> 
 </head>
 
-<body style="background-color: #FEF9E7;">
+<body style="/*background-color: #FEF9E7;*/background-image: url( 'Sean.jpg' );">
   <div id="navbar"></div>
-  <div id="title" class="jumbotron p-4 p-md-5 text-white bg-orange">
+<!--<div id="title" class="jumbotron p-4 p-md-5 text-white bg-orange">
     <div class="px-0">
       <h1>Silver Eye: Detector of elusive</h1>
     </div>
-  </div>
+  </div>-->
   <div class="center-content page-container">
 
     <div class="progress" id="loader">
@@ -43,7 +43,7 @@
     <div id="button_div">
       <button id="confirm_button_legal" 
       class="confirm_button" 
-      onclick="$('#tiny_face_detector_controls').show();legalbg();">Legal ! You can use Advanced Setting</button>
+      onclick="$('#tiny_face_detector_controls').show();legalbg();alert('通過');">Legal ! You can use Advanced Setting</button>
       <button id="confirm_button_illegal" class="deny_button" onclick="denybg();">Stop ! You violate the laws!</button>
     </div>
     
@@ -176,6 +176,7 @@
         
         // display button
         if(interpolatedAge >=18){
+          alert('pass');
           $('#confirm_button_legal').show()
           $('#confirm_button_illegal').hide()
         }else{
